@@ -13,19 +13,29 @@ type NavLinkProps = {
   active: boolean
   pillId: string
   animate?: boolean
+  ready?: boolean
   delay?: number
   onNavigate?: () => void
 }
 
-function NavLink({ item, active, pillId, animate, delay, onNavigate }: NavLinkProps) {
+function NavLink({
+  item,
+  active,
+  pillId,
+  animate,
+  ready = true,
+  delay,
+  onNavigate,
+}: NavLinkProps) {
+  const shouldAnimate = animate && ready
   return (
     <motion.a
       href={`#${item.id}`}
       className={`sidebar__link ${active ? 'is-active' : ''}`}
       onClick={onNavigate}
-      initial={animate ? { x: -30, opacity: 0 } : false}
-      animate={animate ? { x: 0, opacity: 1 } : undefined}
-      transition={animate ? { ...spring, delay } : undefined}
+      initial={shouldAnimate ? { x: -30, opacity: 0 } : false}
+      animate={shouldAnimate ? { x: 0, opacity: 1 } : undefined}
+      transition={shouldAnimate ? { ...spring, delay } : undefined}
       whileHover={{ x: -3, y: -3 }}
       whileTap={{ x: 0, y: 0 }}
     >
@@ -44,9 +54,10 @@ function NavLink({ item, active, pillId, animate, delay, onNavigate }: NavLinkPr
 
 type SidebarProps = {
   active: string
+  ready?: boolean
 }
 
-export function Sidebar({ active }: SidebarProps) {
+export function Sidebar({ active, ready = true }: SidebarProps) {
   const [open, setOpen] = useState(false)
   const { content } = useLanguage()
   const siteData = content.site
@@ -65,7 +76,7 @@ export function Sidebar({ active }: SidebarProps) {
       <motion.aside
         className="sidebar"
         initial={{ x: -40, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        animate={ready ? { x: 0, opacity: 1 } : { x: -40, opacity: 0 }}
         transition={{ ...spring, delay: 0.1 }}
       >
         <motion.a
@@ -86,6 +97,7 @@ export function Sidebar({ active }: SidebarProps) {
               active={active === item.id}
               pillId="nav-pill"
               animate
+              ready={ready}
               delay={0.25 + i * 0.05}
             />
           ))}
@@ -101,7 +113,7 @@ export function Sidebar({ active }: SidebarProps) {
       <motion.header
         className={`mobile-bar ${open ? 'is-open' : ''}`}
         initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        animate={ready ? { y: 0, opacity: 1 } : { y: -40, opacity: 0 }}
         transition={{ ...spring, delay: 0.1 }}
       >
         <a href="#hero" className="sidebar__logo mobile-bar__logo" onClick={close}>

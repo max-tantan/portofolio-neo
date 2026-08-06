@@ -7,7 +7,7 @@ const Hero3D = lazy(() =>
   import('../components/Hero3D').then((m) => ({ default: m.Hero3D })),
 )
 
-export function Hero() {
+export function Hero({ ready }: { ready: boolean }) {
   const { content } = useLanguage()
   const hero = content.hero
 
@@ -17,7 +17,7 @@ export function Hero() {
       className="hero"
       variants={stagger}
       initial="hidden"
-      animate="visible"
+      animate={ready ? 'visible' : 'hidden'}
     >
       <div className="hero__main">
         <motion.div className="hero__copy" variants={stagger}>

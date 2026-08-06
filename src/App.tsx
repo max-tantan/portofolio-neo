@@ -1,5 +1,7 @@
-import { MotionConfig } from 'framer-motion'
+import { AnimatePresence, MotionConfig } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Sidebar } from './components/Sidebar'
+import { Loader } from './components/Loader'
 import { Marquee } from './components/Marquee'
 import { LanguageToggle } from './components/LanguageToggle'
 import { Hero } from './sections/Hero'
@@ -23,15 +25,32 @@ const SECTION_IDS = [
 ]
 
 function AppContent() {
+  const [loading, setLoading] = useState(() => {
+    if (typeof window === 'undefined') return true
+    return !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  })
   const active = useScrollSpy(SECTION_IDS)
   const { content } = useLanguage()
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1600)
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    document.body.style.overflow = loading ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [loading])
+
   return (
     <div className="app">
-      <Sidebar active={active} />
+      <AnimatePresence>{loading && <Loader key="loader" />}</AnimatePresence>
+      <Sidebar active={active} ready={!loading} />
       <LanguageToggle className="lang-toggle--floating" />
       <main className="main">
-        <Hero />
+        <Hero ready={!loading} />
         <Marquee items={content.site.marqueeStack} className="marquee--top" />
         <About />
         <Skills />
