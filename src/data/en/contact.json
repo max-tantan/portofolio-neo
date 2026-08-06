@@ -13,7 +13,7 @@
   "label": "Find me everywhere",
   "links": [
     { "label": "GitHub", "href": "https://github.com/max-tantan", "color": "btn--mint" },
-    { "label": "LinkedIn", "href": "https://linkedin.com", "color": "btn--sky" },
+    { "label": "LinkedIn", "href": "https://linkedin.com/in/fatannurrizqi", "color": "btn--sky" },
     { "label": "Dribbble", "href": "https://dribbble.com", "color": "btn--lavender" },
     { "label": "Email", "href": "mailto:fatannurrizqi@gmail.com", "color": "btn--pink" }
   ]

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
-import { fadeUp, pop, stagger, staggerFast } from '../lib/motion'
+import { fadeUp, pop, spring, stagger, staggerFast } from '../lib/motion'
+import { CounterButton } from '../components/CounterButton'
 import { useLanguage } from '../hooks/useLanguage'
 import avatarSrc from '../assets/foto/foto.png'
 
@@ -27,6 +28,9 @@ export function About() {
           <motion.div
             className="about__avatar pattern-checker"
             variants={pop}
+            whileHover={{ scale: 1.06, rotate: 2 }}
+            whileTap={{ scale: 0.96 }}
+            transition={spring}
           >
             <img
               className="about__avatar-img"
@@ -56,6 +60,7 @@ export function About() {
               </motion.li>
             ))}
           </motion.ul>
+          <CounterButton />
         </motion.div>
       </motion.div>
     </Section>
