@@ -21,8 +21,8 @@
 }
 
 .lang-toggle--compact {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   padding: 0;
 }
 
@@ -64,10 +64,10 @@
 
 .drawer__close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 40px;
-  height: 40px;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
   border: var(--border-w) solid var(--ink);
   background: var(--pink);
   box-shadow: var(--shadow-hard-sm);

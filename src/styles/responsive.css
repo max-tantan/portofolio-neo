@@ -38,7 +38,7 @@
   .mobile-bar__logo {
     margin-bottom: 0;
     font-size: 16px;
-    padding: 8px 12px;
+    padding: 11px 12px;
     flex: none;
   }
 
@@ -47,8 +47,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     flex: none;
     border: var(--border-w) solid var(--ink);
     background: var(--white);
@@ -114,6 +114,12 @@
 }
 
 @media (max-width: 560px) {
+  .app-footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+  }
+
   .hero__name {
     gap: 2px;
     font-size: clamp(28px, 9vw, 40px);

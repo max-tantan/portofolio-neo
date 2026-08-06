@@ -36,6 +36,8 @@ export function About() {
               className="about__avatar-img"
               src={avatarSrc}
               alt={about.avatar.alt}
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
           {about.bio.map((paragraph) => (

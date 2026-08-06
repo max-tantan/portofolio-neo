@@ -39,7 +39,15 @@ function AppContent() {
         <Experience />
         <Marquee items={content.site.marqueeTalk} className="marquee--mid" />
         <Contact />
-        <footer className="app-footer">{content.site.footer}</footer>
+        <footer className="app-footer">
+          <span className="app-footer__meta">
+            © {new Date().getFullYear()} {content.site.siteName}
+          </span>
+          <p className="app-footer__text">{content.site.footer}</p>
+          <a className="app-footer__top" href="#hero">
+            Top <span aria-hidden="true">↑</span>
+          </a>
+        </footer>
       </main>
     </div>
   )

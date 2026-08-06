@@ -1,12 +1,48 @@
 /* ---------- footer ---------- */
 
 .app-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
   border-top: var(--border-w) solid var(--ink);
   background: var(--butter);
-  text-align: center;
-  padding: 22px 20px;
+  padding: 20px;
   font-size: 13px;
+}
+
+.app-footer__meta {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  justify-self: start;
+}
+
+.app-footer__text {
+  font-family: var(--mono);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.app-footer__top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 2px solid var(--ink);
+  background: var(--white);
+  box-shadow: var(--shadow-hard-sm);
+  padding: 8px 12px;
+  justify-self: end;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.app-footer__top:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard);
 }
