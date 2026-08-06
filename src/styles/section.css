@@ -1,0 +1,54 @@
+/* ---------- section shell ---------- */
+
+.section {
+  padding: clamp(48px, 6vw, 84px) clamp(20px, 5vw, 64px);
+  position: relative;
+}
+
+.section + .section {
+  border-top: var(--border-w) solid var(--ink);
+}
+
+.section__head {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  border-bottom: var(--border-w) solid var(--ink);
+  padding-bottom: 22px;
+}
+
+.section__index {
+  font-family: var(--display);
+  border: var(--border-w) solid var(--ink);
+  background: var(--pink);
+  box-shadow: var(--shadow-hard-sm);
+  font-size: 18px;
+  padding: 10px 14px;
+  transform: rotate(-3deg);
+  flex: none;
+}
+
+.section__eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 6px;
+}
+
+.section__head h2 {
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.section__head [aria-hidden='true'] {
+  margin-left: auto;
+  width: clamp(90px, 14vw, 150px);
+  height: 22px;
+  border: var(--border-w) solid var(--ink);
+  box-shadow: var(--shadow-hard-sm);
+  transform: rotate(1.5deg);
+}
+
+.section__body {
+  padding-top: 44px;
+}

@@ -11,7 +11,7 @@ import { Contact } from './sections/Contact'
 import { LanguageProvider } from './context/LanguageProvider'
 import { useLanguage } from './hooks/useLanguage'
 import { useScrollSpy } from './hooks/useScrollSpy'
-import './App.css'
+import './styles/index.css'
 
 const SECTION_IDS = [
   'hero',

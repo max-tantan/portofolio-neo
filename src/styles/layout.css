@@ -1,0 +1,9 @@
+/* ---------- layout ---------- */
+
+.app {
+  min-height: 100svh;
+}
+
+.main {
+  margin-left: 280px;
+}

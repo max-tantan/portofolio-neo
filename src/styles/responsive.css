@@ -1,0 +1,143 @@
+/* ---------- responsive ---------- */
+
+@media (max-width: 960px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    background: var(--lavender);
+    border-bottom: var(--border-w) solid var(--ink);
+    position: sticky;
+    top: 0;
+    z-index: 55;
+  }
+
+  .mobile-bar__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: none;
+  }
+
+  .lang-toggle--floating {
+    display: none;
+  }
+
+  .mobile-bar__logo {
+    margin-bottom: 0;
+    font-size: 16px;
+    padding: 8px 12px;
+    flex: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    flex: none;
+    border: var(--border-w) solid var(--ink);
+    background: var(--white);
+    box-shadow: var(--shadow-hard-sm);
+    padding: 8px;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: var(--ink);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .mobile-bar.is-open .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .mobile-bar.is-open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-bar.is-open .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .sidebar-3d-wrap {
+    display: block;
+  }
+
+  .hero__main {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__visual {
+    order: -1;
+  }
+
+  .hero-3d {
+    height: 340px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    align-items: center;
+  }
+
+  .timeline__card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero__stats {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 18px;
+  }
+
+  .hero__stats li:nth-child(3) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .section__head {
+    flex-wrap: wrap;
+  }
+
+  .section__head [aria-hidden='true'] {
+    display: none;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeline__num {
+    display: none;
+  }
+}

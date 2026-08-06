@@ -1,0 +1,60 @@
+/* ---------- contact ---------- */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.contact__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.contact__cta .btn {
+  color: var(--ink-soft);
+}
+
+.contact__cta h3 {
+  font-size: clamp(28px, 3.6vw, 42px);
+}
+
+.contact__cta p {
+  font-size: 16px;
+  max-width: 40ch;
+}
+
+.contact__side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact__label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact__links .btn {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact__patch {
+  height: 110px;
+  border: var(--border-w) solid var(--ink);
+  box-shadow: var(--shadow-hard-sm);
+  margin-top: auto;
+}

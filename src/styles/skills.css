@@ -1,0 +1,37 @@
+/* ---------- skills ---------- */
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.skills__card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: box-shadow 0.12s ease;
+}
+
+.skills__card:hover {
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.skills__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: var(--border-w) solid var(--ink);
+  padding-bottom: 14px;
+}
+
+.skills__head h3 {
+  font-size: 20px;
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

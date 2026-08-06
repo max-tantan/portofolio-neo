@@ -1,0 +1,9 @@
+/* ---------- mobile bar / drawer ---------- */
+
+.mobile-bar {
+  display: none;
+}
+
+.mobile-bar__actions {
+  display: none;
+}

@@ -1,0 +1,12 @@
+/* ---------- footer ---------- */
+
+.app-footer {
+  border-top: var(--border-w) solid var(--ink);
+  background: var(--butter);
+  text-align: center;
+  padding: 22px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
