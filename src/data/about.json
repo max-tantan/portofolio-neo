@@ -1,0 +1,22 @@
+{
+  "section": {
+    "id": "about",
+    "index": "02",
+    "eyebrow": "Who I am",
+    "title": "About me",
+    "pattern": "dots"
+  },
+  "monogram": "F",
+  "bio": [
+    "I’m a frontend developer and designer with a weakness for chunky borders, loud typography, and soft candy colors. I turn messy ideas into memorable interfaces that feel a little bit playful and a lot deliberate.",
+    "Outside code, I collect vintage keyboards, experiment with 3D tools, and take pictures of oddly shaped clouds."
+  ],
+  "funFactsTitle": "Fun facts",
+  "facts": [
+    "Built my first website when I was 13",
+    "Obsessed with pastel color palettes",
+    "Can debug better after a strong coffee",
+    "Favourite shape: the torus knot",
+    "I sketch every interface before coding"
+  ]
+}

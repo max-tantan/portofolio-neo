@@ -2,12 +2,14 @@ import { motion } from 'framer-motion'
 import type { ReactNode } from 'react'
 import { fadeUp, stagger } from '../lib/motion'
 
+export type SectionPattern = 'stripes' | 'dots' | 'checker' | 'diagonal' | 'noise'
+
 type SectionProps = {
   id: string
   index: string
   eyebrow: string
   title: ReactNode
-  pattern?: 'stripes' | 'dots' | 'checker' | 'diagonal' | 'noise'
+  pattern?: SectionPattern
   children: ReactNode
 }
 

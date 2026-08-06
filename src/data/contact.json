@@ -1,0 +1,20 @@
+{
+  "section": {
+    "id": "contact",
+    "index": "06",
+    "eyebrow": "Let’s talk",
+    "title": "Got an idea?",
+    "pattern": "dots"
+  },
+  "cta": {
+    "title": ["Let’s build something", "worth staring at."],
+    "body": "Open for freelance work, collaborations, and the occasional rubber-duck debugging session."
+  },
+  "label": "Find me everywhere",
+  "links": [
+    { "label": "GitHub", "href": "https://github.com", "color": "btn--mint" },
+    { "label": "LinkedIn", "href": "https://linkedin.com", "color": "btn--sky" },
+    { "label": "Dribbble", "href": "https://dribbble.com", "color": "btn--lavender" },
+    { "label": "Email", "href": "mailto:hello@example.com", "color": "btn--pink" }
+  ]
+}

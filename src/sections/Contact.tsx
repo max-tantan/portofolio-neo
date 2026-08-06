@@ -1,22 +1,17 @@
 import { motion } from 'framer-motion'
-import { Section } from '../components/Section'
+import { Section, type SectionPattern } from '../components/Section'
 import { popUp, stagger } from '../lib/motion'
-
-const LINKS = [
-  { label: 'GitHub', href: 'https://github.com', color: 'btn--mint' },
-  { label: 'LinkedIn', href: 'https://linkedin.com', color: 'btn--sky' },
-  { label: 'Dribbble', href: 'https://dribbble.com', color: 'btn--lavender' },
-  { label: 'Email', href: 'mailto:hello@example.com', color: 'btn--pink' },
-]
+import contactData from '../data/contact.json'
+import siteData from '../data/site.json'
 
 export function Contact() {
   return (
     <Section
-      id="contact"
-      index="06"
-      eyebrow="Let’s talk"
-      title="Got an idea?"
-      pattern="dots"
+      id={contactData.section.id}
+      index={contactData.section.index}
+      eyebrow={contactData.section.eyebrow}
+      title={contactData.section.title}
+      pattern={contactData.section.pattern as SectionPattern}
     >
       <motion.div
         className="contact"
@@ -27,30 +22,30 @@ export function Contact() {
       >
         <motion.div className="contact__cta card card--ink" variants={popUp}>
           <h3>
-            Let&rsquo;s build something
-            <br />
-            worth staring at.
+            {contactData.cta.title.map((line, i) => (
+              <span key={line}>
+                {line}
+                {i < contactData.cta.title.length - 1 && <br />}
+              </span>
+            ))}
           </h3>
-          <p>
-            Open for freelance work, collaborations, and the occasional
-            rubber-duck debugging session.
-          </p>
+          <p>{contactData.cta.body}</p>
           <motion.a
             className="btn btn--butter"
-            href="mailto:hello@example.com"
+            href={`mailto:${siteData.email}`}
             whileHover={{ y: -3, x: -3 }}
             whileTap={{ y: 3, x: 3 }}
           >
-            hello@example.com
+            {siteData.email}
           </motion.a>
         </motion.div>
 
         <div className="contact__side">
           <motion.p className="contact__label" variants={popUp}>
-            Find me everywhere
+            {contactData.label}
           </motion.p>
           <motion.ul className="contact__links" variants={stagger}>
-            {LINKS.map((link) => (
+            {contactData.links.map((link) => (
               <motion.li key={link.label} variants={popUp}>
                 <motion.a
                   className={`btn ${link.color}`}

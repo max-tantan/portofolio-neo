@@ -1,19 +1,13 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { spring } from '../lib/motion'
+import siteData from '../data/site.json'
 
 const Sidebar3D = lazy(() =>
   import('./Sidebar3D').then((m) => ({ default: m.Sidebar3D })),
 )
 
-const NAV = [
-  { id: 'hero', label: 'Home', index: '01' },
-  { id: 'about', label: 'About', index: '02' },
-  { id: 'skills', label: 'Skills', index: '03' },
-  { id: 'projects', label: 'Projects', index: '04' },
-  { id: 'experience', label: 'Experience', index: '05' },
-  { id: 'contact', label: 'Contact', index: '06' },
-]
+const NAV = siteData.nav
 
 type NavLinkProps = {
   item: { id: string; label: string; index: string }
@@ -79,7 +73,7 @@ export function Sidebar({ active }: SidebarProps) {
           whileTap={{ x: 0, y: 0 }}
         >
           <span className="sidebar__logo-star" aria-hidden="true" />
-          <span className="sidebar__logo-name">Fatanala</span>
+          <span className="sidebar__logo-name">{siteData.siteName}</span>
         </motion.a>
 
         <nav className="sidebar__nav" aria-label="Sections">
@@ -110,7 +104,7 @@ export function Sidebar({ active }: SidebarProps) {
       >
         <a href="#hero" className="sidebar__logo mobile-bar__logo" onClick={close}>
           <span className="sidebar__logo-star" aria-hidden="true" />
-          <span className="sidebar__logo-name">Fatanala</span>
+          <span className="sidebar__logo-name">{siteData.siteName}</span>
         </a>
         <button
           type="button"
@@ -156,7 +150,7 @@ export function Sidebar({ active }: SidebarProps) {
               </button>
               <a href="#hero" className="sidebar__logo drawer__logo" onClick={close}>
                 <span className="sidebar__logo-star" aria-hidden="true" />
-                <span className="sidebar__logo-name">Fatanala</span>
+                <span className="sidebar__logo-name">{siteData.siteName}</span>
               </a>
               <div className="drawer__nav">
                 {NAV.map((item) => (

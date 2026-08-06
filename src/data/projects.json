@@ -1,0 +1,43 @@
+{
+  "section": {
+    "id": "projects",
+    "index": "04",
+    "eyebrow": "Things I built",
+    "title": "Selected work",
+    "pattern": "checker"
+  },
+  "projects": [
+    {
+      "name": "Candy Drop",
+      "year": "2025",
+      "color": "card--pink",
+      "pattern": "pattern-dots-pastel",
+      "blurb": "A candy-delivery app with a sugar-rush checkout flow.",
+      "tags": ["React", "TypeScript", "R3F"]
+    },
+    {
+      "name": "Blockchain Blocks",
+      "year": "2024",
+      "color": "card--sky",
+      "pattern": "pattern-checker",
+      "blurb": "An interactive 3D explorer for public blockchain data.",
+      "tags": ["Three.js", "WebGL", "WebSocket"]
+    },
+    {
+      "name": "Pick A Pastel",
+      "year": "2024",
+      "color": "card--lavender",
+      "pattern": "pattern-diagonal",
+      "blurb": "A community palette generator with live previews.",
+      "tags": ["Vue", "CSS Tokens", "Node"]
+    },
+    {
+      "name": "Marquee Mart",
+      "year": "2023",
+      "color": "card--butter",
+      "pattern": "pattern-dots",
+      "blurb": "A playful storefront for limited-run merch drops.",
+      "tags": ["Next.js", "Stripe", "Supabase"]
+    }
+  ]
+}

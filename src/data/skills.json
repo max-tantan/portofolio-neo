@@ -1,0 +1,47 @@
+{
+  "section": {
+    "id": "skills",
+    "index": "03",
+    "eyebrow": "What I bring",
+    "title": "Skills",
+    "pattern": "stripes"
+  },
+  "skills": [
+    {
+      "name": "Frontend",
+      "color": "card--pink",
+      "tag": "tag--pink",
+      "items": ["TypeScript", "React", "Vite", "CSS Grid"]
+    },
+    {
+      "name": "Design",
+      "color": "card--lavender",
+      "tag": "tag--lavender",
+      "items": ["Figma", "Design systems", "Illustration", "Branding"]
+    },
+    {
+      "name": "3D & Motion",
+      "color": "card--sky",
+      "tag": "tag--sky",
+      "items": ["Three.js", "R3F", "WebGL", "Keyframes"]
+    },
+    {
+      "name": "Backend",
+      "color": "card--mint",
+      "tag": "tag--mint",
+      "items": ["MySQL", "Laravel", "Express.js"]
+    },
+    {
+      "name": "Tools",
+      "color": "card--peach",
+      "tag": "tag--peach",
+      "items": ["Git", "Vite", "ESLint", "Figma Dev"]
+    },
+    {
+      "name": "Soft skills",
+      "color": "card--butter",
+      "tag": "tag--butter",
+      "items": ["Communication", "Mentoring", "Timing", "Fun"]
+    }
+  ]
+}
