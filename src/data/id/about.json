@@ -1,0 +1,24 @@
+{
+  "section": {
+    "id": "about",
+    "index": "02",
+    "eyebrow": "Siapa aku",
+    "title": "Tentang Saya",
+    "pattern": "dots"
+  },
+  "avatar": {
+    "alt": "Fatanala"
+  },
+  "bio": [
+    "Saya seorang frontend developer dan desainer dengan kelemahan pada border tebal, tipografi yang lantang, dan warna-warna pastel lembut. Saya mengubah ide-ide berantakan menjadi antarmuka yang berkesan — sedikit playful, banyak terencana.",
+    "Di luar coding, saya mengoleksi keyboard vintage, bereksperimen dengan alat 3D, dan memotret awan dengan bentuk yang aneh-aneh."
+  ],
+  "funFactsTitle": "Fakta seru",
+  "facts": [
+    "Membuat website pertama saat umur 13 tahun",
+    "Terobsesi dengan palet warna pastel",
+    "Bisa debug lebih baik setelah segelas kopi",
+    "Bentuk favorit: torus knot",
+    "Saya membuat sketsa setiap antarmuka sebelum coding"
+  ]
+}

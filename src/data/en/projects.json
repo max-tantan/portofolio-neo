@@ -1,0 +1,43 @@
+{
+  "section": {
+    "id": "projects",
+    "index": "04",
+    "eyebrow": "Things I built",
+    "title": "Selected work",
+    "pattern": "checker"
+  },
+  "projects": [
+    {
+      "name": "StudNow",
+      "year": "2025",
+      "color": "card--pink",
+      "pattern": "pattern-dots-pastel",
+      "blurb": "A learning forum where students share knowledge, ask questions, and grow together.",
+      "tags": ["SPAJS", "Tailwind", "CSS3"]
+    },
+    {
+      "name": "AlienStore",
+      "year": "2024",
+      "color": "card--sky",
+      "pattern": "pattern-checker",
+      "blurb": "A full e-commerce website with product catalog, cart, and checkout flow.",
+      "tags": ["Laravel", "React.js", "Tailwind"]
+    },
+    {
+      "name": "MediCare UI/UX",
+      "year": "2024",
+      "color": "card--lavender",
+      "pattern": "pattern-diagonal",
+      "blurb": "UI/UX design for a hospital platform — appointments, patient records, and care.",
+      "tags": ["Figma", "Framer"]
+    },
+    {
+      "name": "Kasir POS",
+      "year": "2023",
+      "color": "card--butter",
+      "pattern": "pattern-dots",
+      "blurb": "A point-of-sale app for managing orders, products, and inventory.",
+      "tags": ["Express.js", "Vue.js", "Tailwind"]
+    }
+  ]
+}

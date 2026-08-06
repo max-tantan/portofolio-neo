@@ -1,0 +1,22 @@
+{
+  "siteName": "Fatanala",
+  "email": "fatannurrizqi@gmail.com",
+  "nav": [
+    { "id": "hero", "label": "Home", "index": "01" },
+    { "id": "about", "label": "About", "index": "02" },
+    { "id": "skills", "label": "Skills", "index": "03" },
+    { "id": "projects", "label": "Projects", "index": "04" },
+    { "id": "experience", "label": "Experience", "index": "05" },
+    { "id": "contact", "label": "Contact", "index": "06" }
+  ],
+  "ui": {
+    "sections": "Sections",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "tools": "tools",
+    "caseStudy": "Case study"
+  },
+  "marqueeStack": ["React", "TypeScript", "Three.js", "WebGL", "Vite", "Figma", "CSS Grid", "Animation"],
+  "marqueeTalk": ["Open for work", "Let’s build something bold", "Say hi", "Pastel forever"],
+  "footer": "Built with brute force, pastel energy & too much coffee"
+}

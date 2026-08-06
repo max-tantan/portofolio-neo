@@ -12,9 +12,9 @@
   },
   "label": "Find me everywhere",
   "links": [
-    { "label": "GitHub", "href": "https://github.com", "color": "btn--mint" },
+    { "label": "GitHub", "href": "https://github.com/max-tantan", "color": "btn--mint" },
     { "label": "LinkedIn", "href": "https://linkedin.com", "color": "btn--sky" },
     { "label": "Dribbble", "href": "https://dribbble.com", "color": "btn--lavender" },
-    { "label": "Email", "href": "mailto:hello@example.com", "color": "btn--pink" }
+    { "label": "Email", "href": "mailto:fatannurrizqi@gmail.com", "color": "btn--pink" }
   ]
 }

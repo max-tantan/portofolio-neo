@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { fadeUp, spring, stagger, staggerFast } from '../lib/motion'
-import skillsData from '../data/skills.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 export function Skills() {
+  const { content } = useLanguage()
+  const skillsData = content.skills
+
   return (
     <Section
       id={skillsData.section.id}
@@ -32,7 +35,9 @@ export function Skills() {
           >
             <div className="skills__head">
               <h3>{skill.name}</h3>
-              <span className="tag tag--ink">{skill.items.length} tools</span>
+              <span className="tag tag--ink">
+                {skill.items.length} {content.site.ui.tools}
+              </span>
             </div>
             <motion.ul
               className="skills__list"

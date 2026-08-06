@@ -11,7 +11,7 @@
       "name": "Frontend",
       "color": "card--pink",
       "tag": "tag--pink",
-      "items": ["TypeScript", "React", "Vite", "CSS Grid"]
+      "items": ["TypeScript", "React", "Vue.js", "Vite", "CSS Grid"]
     },
     {
       "name": "Design",
@@ -35,7 +35,7 @@
       "name": "Tools",
       "color": "card--peach",
       "tag": "tag--peach",
-      "items": ["Git", "Vite", "ESLint", "Figma Dev"]
+      "items": ["Git", "Vite", "ESLint", "Figma Dev", "Linux"]
     },
     {
       "name": "Soft skills",

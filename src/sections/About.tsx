@@ -1,16 +1,20 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { fadeUp, pop, stagger, staggerFast } from '../lib/motion'
-import aboutData from '../data/about.json'
+import { useLanguage } from '../hooks/useLanguage'
+import avatarSrc from '../assets/foto/foto.png'
 
 export function About() {
+  const { content } = useLanguage()
+  const about = content.about
+
   return (
     <Section
-      id={aboutData.section.id}
-      index={aboutData.section.index}
-      eyebrow={aboutData.section.eyebrow}
-      title={aboutData.section.title}
-      pattern={aboutData.section.pattern as SectionPattern}
+      id={about.section.id}
+      index={about.section.index}
+      eyebrow={about.section.eyebrow}
+      title={about.section.title}
+      pattern={about.section.pattern as SectionPattern}
     >
       <motion.div
         className="about"
@@ -22,12 +26,15 @@ export function About() {
         <motion.div className="about__card card card--butter" variants={fadeUp}>
           <motion.div
             className="about__avatar pattern-checker"
-            aria-hidden="true"
             variants={pop}
           >
-            <span className="about__avatar-monogram">{aboutData.monogram}</span>
+            <img
+              className="about__avatar-img"
+              src={avatarSrc}
+              alt={about.avatar.alt}
+            />
           </motion.div>
-          {aboutData.bio.map((paragraph) => (
+          {about.bio.map((paragraph) => (
             <p key={paragraph} className="about__bio">
               {paragraph}
             </p>
@@ -35,14 +42,14 @@ export function About() {
         </motion.div>
 
         <motion.div className="about__facts card card--mint" variants={fadeUp}>
-          <h3 className="about__facts-title">{aboutData.funFactsTitle}</h3>
+          <h3 className="about__facts-title">{about.funFactsTitle}</h3>
           <motion.ul
             className="about__facts-list"
             variants={staggerFast}
             initial="hidden"
             animate="visible"
           >
-            {aboutData.facts.map((fact) => (
+            {about.facts.map((fact) => (
               <motion.li key={fact} variants={fadeUp}>
                 <span className="about__facts-bullet" aria-hidden="true" />
                 {fact}

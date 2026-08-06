@@ -1,0 +1,43 @@
+{
+  "section": {
+    "id": "projects",
+    "index": "04",
+    "eyebrow": "Hal yang saya buat",
+    "title": "Karya pilihan",
+    "pattern": "checker"
+  },
+  "projects": [
+    {
+      "name": "StudNow",
+      "year": "2025",
+      "color": "card--pink",
+      "pattern": "pattern-dots-pastel",
+      "blurb": "Forum belajar tempat siswa berbagi ilmu, bertanya, dan tumbuh bersama.",
+      "tags": ["SPAJS", "Tailwind", "CSS3"]
+    },
+    {
+      "name": "AlienStore",
+      "year": "2024",
+      "color": "card--sky",
+      "pattern": "pattern-checker",
+      "blurb": "Website e-commerce lengkap dengan katalog produk, keranjang, dan alur checkout.",
+      "tags": ["Laravel", "React.js", "Tailwind"]
+    },
+    {
+      "name": "MediCare UI/UX",
+      "year": "2024",
+      "color": "card--lavender",
+      "pattern": "pattern-diagonal",
+      "blurb": "Desain UI/UX platform rumah sakit — janji temu, rekam medis, dan perawatan.",
+      "tags": ["Figma", "Framer"]
+    },
+    {
+      "name": "Kasir POS",
+      "year": "2023",
+      "color": "card--butter",
+      "pattern": "pattern-dots",
+      "blurb": "Aplikasi point-of-sale untuk mengelola pesanan, produk, dan stok.",
+      "tags": ["Express.js", "Vue.js", "Tailwind"]
+    }
+  ]
+}

@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { fadeUp, spring, stagger } from '../lib/motion'
-import experienceData from '../data/experience.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 export function Experience() {
+  const { content } = useLanguage()
+  const experienceData = content.experience
+
   return (
     <Section
       id={experienceData.section.id}

@@ -1,0 +1,47 @@
+{
+  "section": {
+    "id": "skills",
+    "index": "03",
+    "eyebrow": "Apa yang saya bawa",
+    "title": "Keahlian",
+    "pattern": "stripes"
+  },
+  "skills": [
+    {
+      "name": "Frontend",
+      "color": "card--pink",
+      "tag": "tag--pink",
+      "items": ["TypeScript", "React", "Vue.js", "Vite", "CSS Grid"]
+    },
+    {
+      "name": "Desain",
+      "color": "card--lavender",
+      "tag": "tag--lavender",
+      "items": ["Figma", "Design system", "Ilustrasi", "Branding"]
+    },
+    {
+      "name": "3D & Animasi",
+      "color": "card--sky",
+      "tag": "tag--sky",
+      "items": ["Three.js", "R3F", "WebGL", "Keyframes"]
+    },
+    {
+      "name": "Backend",
+      "color": "card--mint",
+      "tag": "tag--mint",
+      "items": ["MySQL", "Laravel", "Express.js"]
+    },
+    {
+      "name": "Perkakas",
+      "color": "card--peach",
+      "tag": "tag--peach",
+      "items": ["Git", "Vite", "ESLint", "Figma Dev", "Linux"]
+    },
+    {
+      "name": "Soft skill",
+      "color": "card--butter",
+      "tag": "tag--butter",
+      "items": ["Komunikasi", "Mentoring", "Manajemen waktu", "Seru"]
+    }
+  ]
+}

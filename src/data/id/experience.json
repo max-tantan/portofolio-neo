@@ -1,0 +1,45 @@
+{
+  "section": {
+    "id": "experience",
+    "index": "05",
+    "eyebrow": "Di mana saya pernah berkarya",
+    "title": "Pengalaman",
+    "pattern": "diagonal"
+  },
+  "jobs": [
+    {
+      "role": "Ketua Tim",
+      "org": "Proyek Kompetisi",
+      "period": "2025 — 2026",
+      "color": "card--pink",
+      "dot": "bg--pink",
+      "points": [
+        "Memimpin tim sebanyak 3 kali di proyek kompetisi yang berbeda.",
+        "Mengkoordinasikan pengembangan, pembagian tugas, dan tenggat waktu.",
+        "Membangun dan merilis aplikasi siap lomba di bawah tekanan."
+      ]
+    },
+    {
+      "role": "Juara 1",
+      "org": "CrowdIt 2026",
+      "period": "2026",
+      "color": "card--sky",
+      "dot": "bg--sky",
+      "points": [
+        "Meraih juara 1 dengan proyek StudNow — platform forum belajar.",
+        "Mengembangkan aplikasi dengan SPAJS, Tailwind, dan CSS3."
+      ]
+    },
+    {
+      "role": "Juara Favorit",
+      "org": "Informind Fest 2025",
+      "period": "2025",
+      "color": "card--lavender",
+      "dot": "bg--lavender",
+      "points": [
+        "Meraih juara favorit pada lomba Informind Fest 2025.",
+        "Mempresentasikan proyek di depan juri dan penonton."
+      ]
+    }
+  ]
+}

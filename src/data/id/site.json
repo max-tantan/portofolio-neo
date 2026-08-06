@@ -1,0 +1,22 @@
+{
+  "siteName": "Fatanala",
+  "email": "fatannurrizqi@gmail.com",
+  "nav": [
+    { "id": "hero", "label": "Beranda", "index": "01" },
+    { "id": "about", "label": "Tentang", "index": "02" },
+    { "id": "skills", "label": "Keahlian", "index": "03" },
+    { "id": "projects", "label": "Proyek", "index": "04" },
+    { "id": "experience", "label": "Pengalaman", "index": "05" },
+    { "id": "contact", "label": "Kontak", "index": "06" }
+  ],
+  "ui": {
+    "sections": "Bagian",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "tools": "alat",
+    "caseStudy": "Studi kasus"
+  },
+  "marqueeStack": ["React", "TypeScript", "Three.js", "WebGL", "Vite", "Figma", "CSS Grid", "Animasi"],
+  "marqueeTalk": ["Terbuka untuk kerja sama", "Mari bangun sesuatu yang berani", "Sapa aku", "Pastel selamanya"],
+  "footer": "Dibuat dengan tenaga ekstra, energi pastel & terlalu banyak kopi"
+}

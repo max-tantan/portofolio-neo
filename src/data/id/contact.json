@@ -1,0 +1,20 @@
+{
+  "section": {
+    "id": "contact",
+    "index": "06",
+    "eyebrow": "Mari bicara",
+    "title": "Punya ide?",
+    "pattern": "dots"
+  },
+  "cta": {
+    "title": ["Mari bangun sesuatu", "yang layak dilihat."],
+    "body": "Terbuka untuk pekerjaan lepas, kolaborasi, dan sesekali sesi debugging ala rubber-duck."
+  },
+  "label": "Temui aku di mana-mana",
+  "links": [
+    { "label": "GitHub", "href": "https://github.com/max-tantan", "color": "btn--mint" },
+    { "label": "LinkedIn", "href": "https://linkedin.com", "color": "btn--sky" },
+    { "label": "Dribbble", "href": "https://dribbble.com", "color": "btn--lavender" },
+    { "label": "Email", "href": "mailto:fatannurrizqi@gmail.com", "color": "btn--pink" }
+  ]
+}

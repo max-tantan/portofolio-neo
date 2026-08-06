@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion'
 import { lazy, Suspense } from 'react'
 import { fadeIn, fadeUp, pop, spring, stagger } from '../lib/motion'
-import heroData from '../data/hero.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 const Hero3D = lazy(() =>
   import('../components/Hero3D').then((m) => ({ default: m.Hero3D })),
 )
 
 export function Hero() {
+  const { content } = useLanguage()
+  const hero = content.hero
+
   return (
     <motion.section
       id="hero"
@@ -20,18 +23,18 @@ export function Hero() {
         <motion.div className="hero__copy" variants={stagger}>
           <motion.p className="hero__eyebrow" variants={fadeUp}>
             <span className="hero__eyebrow-dot" aria-hidden="true" />
-            {heroData.section.eyebrow}
+            {hero.section.eyebrow}
           </motion.p>
           <motion.h1 className="hero__title" variants={fadeUp}>
-            {heroData.section.title}
+            {hero.section.title}
             <br />
-            I&rsquo;m <span className="hero__name card--butter">{heroData.section.name}</span>
+            I&rsquo;m <span className="hero__name card--butter">{hero.section.name}</span>
           </motion.h1>
           <motion.p className="hero__lead" variants={fadeUp}>
-            {heroData.section.lead}
+            {hero.section.lead}
           </motion.p>
           <motion.div className="hero__actions" variants={fadeUp}>
-            {heroData.buttons.map((button) => (
+            {hero.buttons.map((button) => (
               <a key={button.href} className={button.className} href={button.href}>
                 {button.label}
               </a>
@@ -40,7 +43,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div className="hero__visual" variants={fadeIn}>
-          {heroData.stickers.map((sticker, i) => (
+          {hero.stickers.map((sticker, i) => (
             <motion.div
               key={sticker.label}
               className={sticker.className}
@@ -61,7 +64,7 @@ export function Hero() {
       </div>
 
       <motion.ul className="hero__stats" variants={stagger}>
-        {heroData.stats.map((stat) => (
+        {hero.stats.map((stat) => (
           <motion.li key={stat.label} variants={pop}>
             <strong>{stat.value}</strong>
             <span>{stat.label}</span>

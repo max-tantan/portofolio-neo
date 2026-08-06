@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { popUp, stagger } from '../lib/motion'
-import contactData from '../data/contact.json'
-import siteData from '../data/site.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 export function Contact() {
+  const { content } = useLanguage()
+  const contactData = content.contact
+  const siteData = content.site
+
   return (
     <Section
       id={contactData.section.id}

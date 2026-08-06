@@ -1,13 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { spring } from '../lib/motion'
-import siteData from '../data/site.json'
+import { useLanguage } from '../hooks/useLanguage'
+import { LanguageToggle } from './LanguageToggle'
 
 const Sidebar3D = lazy(() =>
   import('./Sidebar3D').then((m) => ({ default: m.Sidebar3D })),
 )
-
-const NAV = siteData.nav
 
 type NavLinkProps = {
   item: { id: string; label: string; index: string }
@@ -49,6 +48,9 @@ type SidebarProps = {
 
 export function Sidebar({ active }: SidebarProps) {
   const [open, setOpen] = useState(false)
+  const { content } = useLanguage()
+  const siteData = content.site
+  const NAV = siteData.nav
   const close = () => setOpen(false)
 
   useEffect(() => {
@@ -76,7 +78,7 @@ export function Sidebar({ active }: SidebarProps) {
           <span className="sidebar__logo-name">{siteData.siteName}</span>
         </motion.a>
 
-        <nav className="sidebar__nav" aria-label="Sections">
+        <nav className="sidebar__nav" aria-label={siteData.ui.sections}>
           {NAV.map((item, i) => (
             <NavLink
               key={item.id}
@@ -106,17 +108,20 @@ export function Sidebar({ active }: SidebarProps) {
           <span className="sidebar__logo-star" aria-hidden="true" />
           <span className="sidebar__logo-name">{siteData.siteName}</span>
         </a>
-        <button
-          type="button"
-          className="hamburger"
-          onClick={() => setOpen((o) => !o)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="mobile-bar__actions">
+          <LanguageToggle compact />
+          <button
+            type="button"
+            className="hamburger"
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? siteData.ui.closeMenu : siteData.ui.openMenu}
+            aria-expanded={open}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </motion.header>
 
       <AnimatePresence>
@@ -132,7 +137,7 @@ export function Sidebar({ active }: SidebarProps) {
             />
             <motion.nav
               className="drawer"
-              aria-label="Sections"
+              aria-label={siteData.ui.sections}
               role="dialog"
               aria-modal="true"
               initial={{ x: '-100%' }}
@@ -144,7 +149,7 @@ export function Sidebar({ active }: SidebarProps) {
                 type="button"
                 className="drawer__close"
                 onClick={close}
-                aria-label="Close menu"
+                aria-label={siteData.ui.closeMenu}
               >
                 &times;
               </button>

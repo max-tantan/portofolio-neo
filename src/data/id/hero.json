@@ -1,0 +1,23 @@
+{
+  "section": {
+    "id": "hero",
+    "eyebrow": "Tersedia untuk proyek baru",
+    "title": "Halo!",
+    "name": "Fatanala",
+    "lead": "Developer kreatif yang mengubah ide-ide berani menjadi antarmuka ceria nan pastel — dengan sedikit sihir 3D."
+  },
+  "buttons": [
+    { "label": "Lihat karyaku", "href": "#projects", "className": "btn btn--ink" },
+    { "label": "Sapa aku", "href": "#contact", "className": "btn btn--butter" }
+  ],
+  "stickers": [
+    { "label": "Frontend Dev", "className": "hero__sticker card--peach" },
+    { "label": "UI/UX", "className": "hero__sticker hero__sticker--back card--mint" }
+  ],
+  "stats": [
+    { "value": "4+", "label": "tahun berkarya" },
+    { "value": "32", "label": "proyek selesai" },
+    { "value": "12", "label": "klien senang" },
+    { "value": "∞", "label": "pikiran penasaran" }
+  ]
+}

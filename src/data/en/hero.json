@@ -3,7 +3,7 @@
     "id": "hero",
     "eyebrow": "Available for new projects",
     "title": "Hello!",
-    "name": "Fatanala",
+    "name": "Fatan",
     "lead": "Creative developer who shapes bold ideas into playful, pastel interfaces — with a pinch of 3D magic."
   },
   "buttons": [
@@ -15,8 +15,8 @@
     { "label": "UI/UX", "className": "hero__sticker hero__sticker--back card--mint" }
   ],
   "stats": [
-    { "value": "4+", "label": "years crafting" },
-    { "value": "32", "label": "projects shipped" },
+    { "value": "3+", "label": "years crafting" },
+    { "value": "30", "label": "projects shipped" },
     { "value": "12", "label": "happy clients" },
     { "value": "∞", "label": "curious mind" }
   ]

@@ -1,0 +1,45 @@
+{
+  "section": {
+    "id": "experience",
+    "index": "05",
+    "eyebrow": "Where I’ve been",
+    "title": "Experience",
+    "pattern": "diagonal"
+  },
+  "jobs": [
+    {
+      "role": "Team Leader",
+      "org": "Competition Projects",
+      "period": "2025 — 2026",
+      "color": "card--pink",
+      "dot": "bg--pink",
+      "points": [
+        "Led a team 3 times across different competition projects.",
+        "Coordinated development, division of tasks, and deadlines.",
+        "Built and shipped competition-ready applications under pressure."
+      ]
+    },
+    {
+      "role": "1st Place Winner",
+      "org": "CrowdIt 2026",
+      "period": "2026",
+      "color": "card--sky",
+      "dot": "bg--sky",
+      "points": [
+        "Won 1st place with the StudNow project — a learning forum platform.",
+        "Developed the app with SPAJS, Tailwind, and CSS3."
+      ]
+    },
+    {
+      "role": "Favorite Winner",
+      "org": "Informind Fest 2025",
+      "period": "2025",
+      "color": "card--lavender",
+      "dot": "bg--lavender",
+      "points": [
+        "Won the Favorite award at the Informind Fest 2025 competition.",
+        "Presented the project in front of judges and the audience."
+      ]
+    }
+  ]
+}

@@ -1,12 +1,15 @@
 import { MotionConfig } from 'framer-motion'
 import { Sidebar } from './components/Sidebar'
 import { Marquee } from './components/Marquee'
+import { LanguageToggle } from './components/LanguageToggle'
 import { Hero } from './sections/Hero'
 import { About } from './sections/About'
 import { Skills } from './sections/Skills'
 import { Projects } from './sections/Projects'
 import { Experience } from './sections/Experience'
 import { Contact } from './sections/Contact'
+import { LanguageProvider } from './context/LanguageProvider'
+import { useLanguage } from './hooks/useLanguage'
 import { useScrollSpy } from './hooks/useScrollSpy'
 import './App.css'
 
@@ -19,29 +22,36 @@ const SECTION_IDS = [
   'contact',
 ]
 
-const STACK_MARQUEE = ['React', 'TypeScript', 'Three.js', 'WebGL', 'Vite', 'Figma', 'CSS Grid', 'Animation']
-const TALK_MARQUEE = ['Open for work', 'Let’s build something bold', 'Say hi', 'Pastel forever']
-
-function App() {
+function AppContent() {
   const active = useScrollSpy(SECTION_IDS)
+  const { content } = useLanguage()
 
   return (
-    <MotionConfig reducedMotion="user">
-      <div className="app">
-        <Sidebar active={active} />
-        <main className="main">
-          <Hero />
-          <Marquee items={STACK_MARQUEE} className="marquee--top" />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Marquee items={TALK_MARQUEE} className="marquee--mid" />
-          <Contact />
-          <footer className="app-footer">Built with brute force, pastel energy & too much coffee</footer>
-        </main>
-      </div>
-    </MotionConfig>
+    <div className="app">
+      <Sidebar active={active} />
+      <LanguageToggle className="lang-toggle--floating" />
+      <main className="main">
+        <Hero />
+        <Marquee items={content.site.marqueeStack} className="marquee--top" />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Marquee items={content.site.marqueeTalk} className="marquee--mid" />
+        <Contact />
+        <footer className="app-footer">{content.site.footer}</footer>
+      </main>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <MotionConfig reducedMotion="user">
+        <AppContent />
+      </MotionConfig>
+    </LanguageProvider>
   )
 }
 

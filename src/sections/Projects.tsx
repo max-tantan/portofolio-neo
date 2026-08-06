@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { fadeUp, spring, stagger, staggerFast } from '../lib/motion'
-import projectsData from '../data/projects.json'
+import { useLanguage } from '../hooks/useLanguage'
 
 export function Projects() {
+  const { content } = useLanguage()
+  const projectsData = content.projects
+
   return (
     <Section
       id={projectsData.section.id}
@@ -49,7 +52,7 @@ export function Projects() {
                 ))}
               </motion.ul>
               <a className="projects__link" href="#contact">
-                Case study <span aria-hidden="true">&Nearr;</span>
+                {content.site.ui.caseStudy} <span aria-hidden="true">&Nearr;</span>
               </a>
             </div>
           </motion.article>
