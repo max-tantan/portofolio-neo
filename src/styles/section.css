@@ -18,17 +18,18 @@
 }
 
 .section__index {
-  font-family: var(--display);
+  font-family: var(--mono);
   border: var(--border-w) solid var(--ink);
   background: var(--pink);
   box-shadow: var(--shadow-hard-sm);
-  font-size: 18px;
+  font-size: 15px;
   padding: 10px 14px;
   transform: rotate(-3deg);
   flex: none;
 }
 
 .section__eyebrow {
+  font-family: var(--mono);
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;

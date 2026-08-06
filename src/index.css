@@ -16,6 +16,7 @@
 
   --sans: 'Space Grotesk', system-ui, sans-serif;
   --display: 'Archivo Black', var(--sans);
+  --mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   font: 17px/1.6 var(--sans);
   color: var(--ink);
@@ -184,10 +185,11 @@ canvas {
 
 .tag {
   display: inline-block;
+  font-family: var(--mono);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   padding: 4px 10px;
   border: 2px solid var(--ink);
   background: var(--white);

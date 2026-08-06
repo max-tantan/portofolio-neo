@@ -27,8 +27,13 @@ export function Hero() {
           </motion.p>
           <motion.h1 className="hero__title" variants={fadeUp}>
             {hero.section.title}
-            <br />
-            I&rsquo;m <span className="hero__name card--butter">{hero.section.name}</span>
+            <span className="hero__name" aria-label={hero.section.name}>
+              {hero.section.name.split('').map((letter, i) => (
+                <span key={i} className="hero__magnet">
+                  {letter}
+                </span>
+              ))}
+            </span>
           </motion.h1>
           <motion.p className="hero__lead" variants={fadeUp}>
             {hero.section.lead}

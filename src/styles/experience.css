@@ -16,8 +16,8 @@
 }
 
 .timeline__num {
-  font-family: var(--display);
-  font-size: 30px;
+  font-family: var(--mono);
+  font-size: 24px;
   border: var(--border-w) solid var(--ink);
   background: var(--butter);
   box-shadow: var(--shadow-hard-sm);

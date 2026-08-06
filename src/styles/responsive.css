@@ -114,6 +114,15 @@
 }
 
 @media (max-width: 560px) {
+  .hero__name {
+    gap: 2px;
+    font-size: clamp(28px, 9vw, 40px);
+  }
+
+  .hero__magnet {
+    padding: 0.02em 0.08em;
+  }
+
   .hero__stats {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 18px;

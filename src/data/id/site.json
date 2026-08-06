@@ -14,7 +14,7 @@
     "openMenu": "Buka menu",
     "closeMenu": "Tutup menu",
     "tools": "alat",
-    "caseStudy": "Studi kasus"
+    "caseStudy": "Tanya soal proyek ini"
   },
   "marqueeStack": ["React", "TypeScript", "Three.js", "WebGL", "Vite", "Figma", "CSS Grid", "Animasi"],
   "marqueeTalk": ["Terbuka untuk kerja sama", "Mari bangun sesuatu yang berani", "Sapa aku", "Pastel selamanya"],

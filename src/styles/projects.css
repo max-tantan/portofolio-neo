@@ -27,7 +27,7 @@
 }
 
 .projects__thumb span {
-  font-family: var(--display);
+  font-family: var(--mono);
   border: var(--border-w) solid var(--ink);
   background: var(--white);
   box-shadow: var(--shadow-hard-sm);

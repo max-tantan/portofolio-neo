@@ -16,8 +16,8 @@
   border: var(--border-w) solid var(--ink);
   background: var(--white);
   box-shadow: var(--shadow-hard-sm);
-  font-family: var(--display);
-  font-size: 32px;
+  font-family: var(--mono);
+  font-size: 28px;
   transform: rotate(-2deg);
 }
 
