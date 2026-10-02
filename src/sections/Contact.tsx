@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { popUp, stagger } from '../lib/motion'
+import { Magnetic } from '../components/interactions/Magnetic'
 import { useLanguage } from '../hooks/useLanguage'
 
 export function Contact() {
@@ -33,14 +34,11 @@ export function Contact() {
             ))}
           </h3>
           <p>{contactData.cta.body}</p>
-          <motion.a
-            className="btn btn--butter"
-            href={`mailto:${siteData.email}`}
-            whileHover={{ y: -3, x: -3 }}
-            whileTap={{ y: 3, x: 3 }}
-          >
-            {siteData.email}
-          </motion.a>
+          <Magnetic strength={0.35}>
+            <a className="btn btn--butter" href={`mailto:${siteData.email}`}>
+              {siteData.email}
+            </a>
+          </Magnetic>
         </motion.div>
 
         <div className="contact__side">
@@ -50,17 +48,17 @@ export function Contact() {
           <motion.ul className="contact__links" variants={stagger}>
             {contactData.links.map((link) => (
               <motion.li key={link.label} variants={popUp}>
-                <motion.a
-                  className={`btn ${link.color}`}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  whileHover={{ y: -3, x: -3 }}
-                  whileTap={{ y: 3, x: 3 }}
-                >
-                  {link.label}
-                  <span aria-hidden="true">&Nearr;</span>
-                </motion.a>
+                <Magnetic strength={0.35}>
+                  <a
+                    className={`btn ${link.color}`}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.label}
+                    <span aria-hidden="true">&Nearr;</span>
+                  </a>
+                </Magnetic>
               </motion.li>
             ))}
           </motion.ul>

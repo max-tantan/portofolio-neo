@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { lazy, Suspense, useEffect, useState } from 'react'
-import { spring } from '../lib/motion'
+import { fadeUp, spring, stagger } from '../lib/motion'
 import { useLanguage } from '../hooks/useLanguage'
 import { LanguageToggle } from './LanguageToggle'
 
@@ -169,17 +169,23 @@ export function Sidebar({ active, ready = true }: SidebarProps) {
                 <span className="sidebar__logo-star" aria-hidden="true" />
                 <span className="sidebar__logo-name">{siteData.siteName}</span>
               </a>
-              <div className="drawer__nav">
+              <motion.div
+                className="drawer__nav"
+                variants={stagger}
+                initial="hidden"
+                animate="visible"
+              >
                 {NAV.map((item) => (
-                  <NavLink
-                    key={item.id}
-                    item={item}
-                    active={active === item.id}
-                    pillId="drawer-pill"
-                    onNavigate={close}
-                  />
+                  <motion.div key={item.id} variants={fadeUp}>
+                    <NavLink
+                      item={item}
+                      active={active === item.id}
+                      pillId="drawer-pill"
+                      onNavigate={close}
+                    />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
               <div className="sidebar-3d-wrap drawer__3d">
                 <Suspense fallback={<div className="sidebar-3d sidebar-3d--loading" />}>
                   <Sidebar3D />

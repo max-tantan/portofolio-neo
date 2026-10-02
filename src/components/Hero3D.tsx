@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, type MutableRefObject } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Float } from '@react-three/drei'
 import type { Mesh } from 'three'
@@ -47,6 +47,19 @@ function SpinningShape({
       </mesh>
     </Float>
   )
+}
+
+type PointerTarget = MutableRefObject<{ x: number; y: number }>
+
+function Rig({ target }: { target: PointerTarget }) {
+  useFrame((state, delta) => {
+    const camera = state.camera
+    const rotY = target.current.x * 0.24
+    const rotX = target.current.y * 0.16
+    camera.rotation.y += (rotY - camera.rotation.y) * Math.min(delta * 2.6, 1)
+    camera.rotation.x += (rotX - camera.rotation.x) * Math.min(delta * 2.6, 1)
+  })
+  return null
 }
 
 function Scene() {
@@ -118,6 +131,18 @@ export function Hero3D() {
   const reduced = typeof window !== 'undefined'
     ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
     : false
+  const target = useRef({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const fine = window.matchMedia('(pointer: fine)').matches
+    if (!fine || reduced) return
+    const handle = (event: PointerEvent) => {
+      target.current.x = (event.clientX / window.innerWidth) * 2 - 1
+      target.current.y = (event.clientY / window.innerHeight) * 2 - 1
+    }
+    window.addEventListener('pointermove', handle, { passive: true })
+    return () => window.removeEventListener('pointermove', handle)
+  }, [reduced])
 
   return (
     <div
@@ -132,6 +157,7 @@ export function Hero3D() {
         shadows
       >
         <Scene />
+        <Rig target={target} />
       </Canvas>
     </div>
   )

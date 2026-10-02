@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Section, type SectionPattern } from '../components/Section'
 import { fadeUp, spring, stagger, staggerFast } from '../lib/motion'
+import { TiltCard } from '../components/interactions/TiltCard'
 import { useLanguage } from '../hooks/useLanguage'
 
 export function Skills() {
@@ -23,35 +24,40 @@ export function Skills() {
         viewport={{ once: true, margin: '-60px' }}
       >
         {skillsData.skills.map((skill, i) => (
-          <motion.div
-            key={skill.name}
+          <TiltCard
+            key={`${skillsData.section.id}-skill-${i}`}
             className={`card skills__card ${skill.color}`}
-            variants={fadeUp}
-            whileHover={{
-              y: -6,
-              rotate: i % 2 === 0 ? -0.6 : 0.6,
-              transition: spring,
-            }}
+            max={7}
           >
-            <div className="skills__head">
-              <h3>{skill.name}</h3>
-              <span className="tag tag--ink">
-                {skill.items.length} {content.site.ui.tools}
-              </span>
-            </div>
-            <motion.ul
-              className="skills__list"
-              variants={staggerFast}
-              initial="hidden"
-              animate="visible"
+            <motion.div
+              className="skills__inner"
+              variants={fadeUp}
+              whileHover={{
+                y: -5,
+                rotate: i % 2 === 0 ? -0.6 : 0.6,
+                transition: spring,
+              }}
             >
-              {skill.items.map((item) => (
-                <motion.li key={item} variants={fadeUp}>
-                  <span className={`tag ${skill.tag}`}>{item}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </motion.div>
+              <div className="skills__head">
+                <h3>{skill.name}</h3>
+                <span className="tag tag--ink">
+                  {skill.items.length} {content.site.ui.tools}
+                </span>
+              </div>
+              <motion.ul
+                className="skills__list"
+                variants={staggerFast}
+                initial="hidden"
+                animate="visible"
+              >
+                {skill.items.map((item) => (
+                  <motion.li key={item} variants={fadeUp}>
+                    <span className={`tag ${skill.tag}`}>{item}</span>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          </TiltCard>
         ))}
       </motion.div>
     </Section>

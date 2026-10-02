@@ -68,46 +68,45 @@
   padding: 0.06em 0.16em;
   border: var(--border-w) solid var(--ink);
   box-shadow: var(--shadow-hard-sm);
-  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  transition: box-shadow 0.14s ease;
 }
 
 .hero__magnet:nth-child(1) {
   background: var(--butter);
-  transform: rotate(-3deg);
+  rotate: -3deg;
 }
 
 .hero__magnet:nth-child(2) {
   background: var(--pink);
-  transform: rotate(2deg);
+  rotate: 2deg;
 }
 
 .hero__magnet:nth-child(3) {
   background: var(--sky);
-  transform: rotate(-1.5deg);
+  rotate: -1.5deg;
 }
 
 .hero__magnet:nth-child(4) {
   background: var(--mint);
-  transform: rotate(2.5deg);
+  rotate: 2.5deg;
 }
 
 .hero__magnet:nth-child(5) {
   background: var(--lavender);
-  transform: rotate(-2deg);
+  rotate: -2deg;
 }
 
 .hero__magnet:nth-child(6) {
   background: var(--peach);
-  transform: rotate(1.5deg);
+  rotate: 1.5deg;
 }
 
 .hero__magnet:nth-child(7) {
   background: var(--butter);
-  transform: rotate(-2.5deg);
+  rotate: -2.5deg;
 }
 
 .hero__magnet:hover {
-  transform: translate(-3px, -3px) rotate(-6deg);
   box-shadow: var(--shadow-hard);
 }
 

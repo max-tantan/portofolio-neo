@@ -51,3 +51,23 @@ export const spring = {
   stiffness: 420,
   damping: 26,
 } as const
+
+export const magneticSpring = {
+  stiffness: 320,
+  damping: 21,
+  mass: 0.45,
+} as const
+
+export const tiltSpring = {
+  stiffness: 220,
+  damping: 18,
+  mass: 0.5,
+} as const
+
+export const wordReveal: Variants = {
+  hidden: { y: '115%' },
+  visible: {
+    y: '0%',
+    transition: { duration: 0.6, ease: EASE },
+  },
+}

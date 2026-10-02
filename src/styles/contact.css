@@ -52,6 +52,11 @@
   justify-content: space-between;
 }
 
+.contact__links .magnetic,
+.contact__cta .magnetic {
+  width: 100%;
+}
+
 .contact__patch {
   height: 110px;
   border: var(--border-w) solid var(--ink);

@@ -15,11 +15,6 @@
 .marquee__track {
   display: flex;
   width: max-content;
-  animation: marquee 22s linear infinite;
-}
-
-.marquee:hover .marquee__track {
-  animation-play-state: paused;
 }
 
 .marquee__row {
@@ -29,10 +24,4 @@
   letter-spacing: 0.06em;
   padding: 10px 0;
   white-space: nowrap;
-}
-
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
 }

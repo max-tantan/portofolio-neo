@@ -13,6 +13,9 @@ import { Contact } from './sections/Contact'
 import { LanguageProvider } from './context/LanguageProvider'
 import { useLanguage } from './hooks/useLanguage'
 import { useScrollSpy } from './hooks/useScrollSpy'
+import { Cursor } from './components/interactions/Cursor'
+import { ScrollProgress } from './components/interactions/ScrollProgress'
+import { Magnetic } from './components/interactions/Magnetic'
 import './styles/index.css'
 
 const SECTION_IDS = [
@@ -47,6 +50,8 @@ function AppContent() {
   return (
     <div className="app">
       <AnimatePresence>{loading && <Loader key="loader" />}</AnimatePresence>
+      <ScrollProgress />
+      <Cursor />
       <Sidebar active={active} ready={!loading} />
       <LanguageToggle className="lang-toggle--floating" />
       <main className="main">
@@ -63,9 +68,11 @@ function AppContent() {
             © {new Date().getFullYear()} {content.site.siteName}
           </span>
           <p className="app-footer__text">{content.site.footer}</p>
-          <a className="app-footer__top" href="#hero">
-            Top <span aria-hidden="true">↑</span>
-          </a>
+          <Magnetic strength={0.3}>
+            <a className="app-footer__top" href="#hero">
+              Top <span aria-hidden="true">↑</span>
+            </a>
+          </Magnetic>
         </footer>
       </main>
     </div>

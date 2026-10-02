@@ -1,0 +1,75 @@
+/* ---------- interactions ---------- */
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  border: 2px solid var(--ink);
+  background: var(--pink);
+  box-shadow: 3px 3px 0 var(--ink);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--pink),
+    var(--butter),
+    var(--mint),
+    var(--sky),
+    var(--lavender)
+  );
+  border-bottom: 2px solid var(--ink);
+  transform-origin: 0 50%;
+  z-index: 1000;
+}
+
+.magnetic {
+  display: inline-flex;
+  will-change: transform;
+}
+
+.tilt-card {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt-card__glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+.word-reveal {
+  display: inline-block;
+}
+
+.word-reveal__mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.word-reveal__word {
+  display: inline-block;
+  will-change: transform;
+}

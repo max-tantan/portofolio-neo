@@ -38,8 +38,11 @@
   background: var(--white);
   box-shadow: var(--shadow-hard-sm);
   padding: 8px 12px;
-  justify-self: end;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.app-footer > .magnetic {
+  justify-self: end;
 }
 
 .app-footer__top:hover {

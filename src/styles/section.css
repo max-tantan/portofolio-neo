@@ -17,7 +17,13 @@
   padding-bottom: 22px;
 }
 
+.section__index-wrap {
+  flex: none;
+  will-change: transform;
+}
+
 .section__index {
+  display: block;
   font-family: var(--mono);
   border: var(--border-w) solid var(--ink);
   background: var(--pink);
@@ -25,7 +31,6 @@
   font-size: 15px;
   padding: 10px 14px;
   transform: rotate(-3deg);
-  flex: none;
 }
 
 .section__eyebrow {
@@ -41,8 +46,13 @@
   font-size: clamp(34px, 5vw, 52px);
 }
 
-.section__head [aria-hidden='true'] {
+.section__pattern-wrap {
   margin-left: auto;
+  will-change: transform;
+}
+
+.section__pattern-wrap > [aria-hidden='true'] {
+  display: block;
   width: clamp(90px, 14vw, 150px);
   height: 22px;
   border: var(--border-w) solid var(--ink);
