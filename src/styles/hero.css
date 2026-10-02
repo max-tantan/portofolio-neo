@@ -182,7 +182,9 @@
 
 .hero__stats strong {
   font-family: var(--display);
-  font-size: clamp(26px, 3.4vw, 38px);
+  font-size: clamp(6rem, 10vw, 18rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
   display: block;
 }
 

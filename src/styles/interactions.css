@@ -55,6 +55,9 @@
 
 .count-up {
   font-variant-numeric: tabular-nums;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
 }
 
 .word-reveal {

@@ -25,7 +25,7 @@ export function Skills() {
       >
         {skillsData.skills.map((skill, i) => (
           <TiltCard
-            key={`${skillsData.section.id}-skill-${i}`}
+            key={('id' in skill && skill.id) ? String(skill.id) : `${skillsData.section.id}-skill-${i}`}
             className={`card skills__card ${skill.color}`}
             max={7}
           >

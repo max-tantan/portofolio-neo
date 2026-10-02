@@ -8,37 +8,43 @@
   },
   "skills": [
     {
+      "id": "frontend",
       "name": "Frontend",
       "color": "card--pink",
       "tag": "tag--pink",
       "items": ["TypeScript", "React", "Vue.js", "Vite", "CSS Grid"]
     },
     {
+      "id": "design",
       "name": "Desain",
       "color": "card--lavender",
       "tag": "tag--lavender",
       "items": ["Figma", "Design system", "Ilustrasi", "Branding"]
     },
     {
+      "id": "3d-motion",
       "name": "3D & Animasi",
       "color": "card--sky",
       "tag": "tag--sky",
       "items": ["Three.js", "R3F", "WebGL", "Keyframes"]
     },
     {
+      "id": "backend",
       "name": "Backend",
       "color": "card--mint",
       "tag": "tag--mint",
       "items": ["MySQL", "Laravel", "Express.js"]
     },
     {
+      "id": "tools",
       "name": "Perkakas",
       "color": "card--peach",
       "tag": "tag--peach",
       "items": ["Git", "Vite", "ESLint", "Figma Dev", "Linux"]
     },
     {
-      "name": "Soft skill",
+      "id": "soft-skills",
+      "name": "Soft skills",
       "color": "card--butter",
       "tag": "tag--butter",
       "items": ["Komunikasi", "Mentoring", "Manajemen waktu", "Seru"]

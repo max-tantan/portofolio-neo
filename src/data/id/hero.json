@@ -15,8 +15,8 @@
     { "label": "UI/UX", "className": "hero__sticker hero__sticker--back card--mint" }
   ],
   "stats": [
-    { "value": "4+", "label": "tahun berkarya" },
-    { "value": "32", "label": "proyek selesai" },
+    { "value": "3+", "label": "tahun berkarya" },
+    { "value": "30", "label": "proyek selesai" },
     { "value": "12", "label": "klien senang" },
     { "value": "∞", "label": "pikiran penasaran" }
   ]
