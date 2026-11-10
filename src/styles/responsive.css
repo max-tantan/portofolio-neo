@@ -99,6 +99,16 @@
     grid-template-columns: 1fr;
   }
 
+  .projects__inner--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__thumb--featured {
+    height: 200px;
+    border-right: none;
+    border-bottom: var(--border-w) solid var(--ink);
+  }
+
   .timeline {
     align-items: center;
   }
@@ -141,6 +151,10 @@
 
   .section__head {
     flex-wrap: wrap;
+  }
+
+  .projects__info--featured {
+    padding: 20px;
   }
 
   .section__head [aria-hidden='true'] {

@@ -6,7 +6,38 @@
     "title": "Selected work",
     "pattern": "checker"
   },
+  "featured": {
+    "name": "Nexxa Ecosystem",
+    "year": "2026",
+    "color": "card--mint",
+    "pattern": "pattern-checker",
+    "flag": "Featured project",
+    "award": "JHIC 2026 — Quarter Final",
+    "blurb": "An AI-powered school ecosystem — a school website fused with a complete school management system for students, teachers, and academics.",
+    "highlights": [
+      "AI assistant built on OpenRouter running the DeepSeek Flash model",
+      "School management covering students, teachers, schedules, and grades",
+      "Go backend powering a React frontend"
+    ],
+    "tags": ["Go", "React.js", "OpenRouter", "DeepSeek Flash"]
+  },
   "projects": [
+    {
+      "name": "Mikuri",
+      "year": "2026",
+      "color": "card--pink",
+      "pattern": "pattern-stripes-pastel",
+      "blurb": "A coding learning app for kids aged 7–12 — interactive tracks, quizzes, a playground, stars, and badges.",
+      "tags": ["Vue", "TypeScript", "Vite"]
+    },
+    {
+      "name": "StudGrowth Hub",
+      "year": "2026",
+      "color": "card--lavender",
+      "pattern": "pattern-diagonal",
+      "blurb": "An app for schools to monitor students' mental health and development — daily journals, AI consultations, and teacher dashboards.",
+      "tags": ["React", "TypeScript", "Vite", "Tailwind"]
+    },
     {
       "name": "StudNow",
       "year": "2025",

@@ -20,6 +20,18 @@
       ]
     },
     {
+      "role": "PKL Intern",
+      "org": "PT Sampul Kreativ Technology",
+      "period": "2026 — 2027",
+      "color": "card--peach",
+      "dot": "bg--peach",
+      "points": [
+        "Completed a workplace internship (PKL) at PT Sampul Kreativ Technology.",
+        "Learned real-world software development workflows in an industry setting.",
+        "Collaborated with a professional team and practiced industry-standard tools."
+      ]
+    },
+    {
       "role": "1st Place Winner",
       "org": "CrowdIt 2026",
       "period": "2026",
@@ -28,6 +40,17 @@
       "points": [
         "Won 1st place with the StudNow project — a learning forum platform.",
         "Developed the app with SPAJS, Tailwind, and CSS3."
+      ]
+    },
+    {
+      "role": "Quarter Final — Top 26",
+      "org": "JHIC 2026",
+      "period": "2026",
+      "color": "card--mint",
+      "dot": "bg--mint",
+      "points": [
+        "Advanced to the Quarter Final — top 26 at JHIC 2026.",
+        "Entered with the Nexxa Ecosystem project — an AI-powered school website and management system."
       ]
     },
     {

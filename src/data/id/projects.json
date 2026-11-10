@@ -6,7 +6,38 @@
     "title": "Karya pilihan",
     "pattern": "checker"
   },
+  "featured": {
+    "name": "Nexxa Ecosystem",
+    "year": "2026",
+    "color": "card--mint",
+    "pattern": "pattern-checker",
+    "flag": "Proyek unggulan",
+    "award": "JHIC 2026 — Quarter Final",
+    "blurb": "Ekosistem sekolah berbasis AI — website sekolah yang menyatu dengan sistem manajemen sekolah menyeluruh untuk siswa, guru, dan akademik.",
+    "highlights": [
+      "Asisten AI berbasis OpenRouter dengan model DeepSeek Flash",
+      "Manajemen sekolah mencakup siswa, guru, jadwal, dan nilai",
+      "Backend Go dengan frontend React"
+    ],
+    "tags": ["Go", "React.js", "OpenRouter", "DeepSeek Flash"]
+  },
   "projects": [
+    {
+      "name": "Mikuri",
+      "year": "2026",
+      "color": "card--pink",
+      "pattern": "pattern-stripes-pastel",
+      "blurb": "Aplikasi belajar koding untuk anak usia 7–12 tahun — jalur belajar interaktif, kuis, playground, bintang, dan lencana.",
+      "tags": ["Vue", "TypeScript", "Vite"]
+    },
+    {
+      "name": "StudGrowth Hub",
+      "year": "2026",
+      "color": "card--lavender",
+      "pattern": "pattern-diagonal",
+      "blurb": "Aplikasi pemantau kesehatan mental dan perkembangan siswa oleh sekolah — jurnal harian, konsultasi AI, dan dasbor guru.",
+      "tags": ["React", "TypeScript", "Vite", "Tailwind"]
+    },
     {
       "name": "StudNow",
       "year": "2025",

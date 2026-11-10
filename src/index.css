@@ -135,6 +135,14 @@ canvas {
   background: var(--lavender);
 }
 
+.bg--mint {
+  background: var(--mint);
+}
+
+.bg--peach {
+  background: var(--peach);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

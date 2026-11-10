@@ -20,6 +20,18 @@
       ]
     },
     {
+      "role": "Peserta PKL",
+      "org": "PT Sampul Kreativ Technology",
+      "period": "2026 — 2027",
+      "color": "card--peach",
+      "dot": "bg--peach",
+      "points": [
+        "Menjalani Praktik Kerja Lapangan (PKL) di PT Sampul Kreativ Technology.",
+        "Mempelajari workflow pengembangan software yang sesungguhnya di lingkungan industri.",
+        "Berkolaborasi dengan tim profesional dan berlatih menggunakan tools industri."
+      ]
+    },
+    {
       "role": "Juara 1",
       "org": "CrowdIt 2026",
       "period": "2026",
@@ -28,6 +40,17 @@
       "points": [
         "Meraih juara 1 dengan proyek StudNow — platform forum belajar.",
         "Mengembangkan aplikasi dengan SPAJS, Tailwind, dan CSS3."
+      ]
+    },
+    {
+      "role": "Quarter Final — 26 Besar",
+      "org": "JHIC 2026",
+      "period": "2026",
+      "color": "card--mint",
+      "dot": "bg--mint",
+      "points": [
+        "Melaju hingga Quarter Final — 26 besar di ajang JHIC 2026.",
+        "Membawa proyek Nexxa Ecosystem — website sekolah berbasis AI dan manajemen sekolah."
       ]
     },
     {
